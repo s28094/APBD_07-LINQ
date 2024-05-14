@@ -227,7 +227,8 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<object> Task5()
         {
-            IEnumerable<object> result = null;
+            IEnumerable<object> result = Emps.Select(x => new {Surname = x.Ename,
+                Job = x.Job});
             return result;
         }
 
