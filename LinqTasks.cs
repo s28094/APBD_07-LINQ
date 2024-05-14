@@ -177,7 +177,10 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<Emp> Task1()
         {
-            IEnumerable<Emp> result = null;
+            IEnumerable<Emp> result = 
+                    from e in Emps
+                    where e.Job == "Backend programmer"
+                    select e;
             return result;
         }
 

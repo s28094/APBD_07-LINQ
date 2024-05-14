@@ -8,6 +8,10 @@ namespace LinqTutorials
         {
             var t = LinqTasks.Task1();
 
+            foreach (var e in t)
+            {
+                Console.Write(e + " ");
+            }
         }
     }
 }
