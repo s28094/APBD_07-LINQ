@@ -29,6 +29,15 @@ namespace LinqTutorials
 
                 Console.Write(t);
             }*/
+            
+            /*{
+                var t = LinqTasks.Task4();
+
+                foreach (var e in t)
+                {
+                    Console.WriteLine(e + " ");
+                }
+            }*/
         }
     }
 }
