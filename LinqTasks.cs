@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 
 namespace LinqTutorials
 {
@@ -189,7 +190,11 @@ namespace LinqTutorials
         /// </summary>
         public static IEnumerable<Emp> Task2()
         {
-            IEnumerable<Emp> result = null;
+            IEnumerable<Emp> result = 
+                    from e in Emps
+                    where e.Job == "Frontend programmer" && e.Salary > 1000 
+                    orderby e.Ename descending
+                    select e;
             return result;
         }
 
